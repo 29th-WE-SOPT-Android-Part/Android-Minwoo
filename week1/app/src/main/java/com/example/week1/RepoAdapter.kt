@@ -2,12 +2,12 @@ package com.example.week1
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week1.databinding.ItemRepoListBinding
 
 class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(){
-    private val repoList  = mutableListOf<RepoData>()
-
+    val repoList  = mutableListOf<RepoData>()
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

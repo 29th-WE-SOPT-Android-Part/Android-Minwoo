@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.week1.databinding.ItemFollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(){
-    private val followerList  = mutableListOf<FollowerData>()
+    val followerList  = mutableListOf<FollowerData>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
