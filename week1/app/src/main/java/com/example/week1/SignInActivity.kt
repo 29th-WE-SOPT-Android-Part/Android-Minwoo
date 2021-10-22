@@ -12,13 +12,15 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initBtnListener()
+    }
+
+    private fun initBtnListener(){
         val intentLogin = Intent(this, HomeActivity::class.java)
         val intentSignup = Intent(this, SignUpActivity::class.java)
-
 
         // btnLogin 버튼 클릭 시 로그인
         binding.btnLogin.setOnClickListener {

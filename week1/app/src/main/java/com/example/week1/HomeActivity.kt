@@ -12,9 +12,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
-
         initTransactionEvent()
-
         setContentView(binding.root)
     }
 
@@ -41,10 +39,8 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-
     companion object{
         const val FOLLOWER_POSITION = 1
         const val REPO_POSITION = 2
     }
-
 }

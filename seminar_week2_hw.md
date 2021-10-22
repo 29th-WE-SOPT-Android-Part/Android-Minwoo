@@ -1,109 +1,151 @@
-# 세미나 1주차 과제
+# 💻 Week 2 
 
-## Level1 필수과제
+## 1️⃣ Level 1 필수과제
 
 ### 코드 설명
 
 <br>
 
-#### SignInActivity
+#### 지난 과제 피드백 내용 반영
 
-```kotlin
-private lateinit var binding : ActivitySignInBinding
-```
++ 변수명의 경우 **lowerCamelCase**를 원칙으로 작성하려고 노력함
++ `onCrete()` method에 모든 기능을 다 넣지 않고, `private fun function()~` 처럼 함수화를 통해 코드의 가독성을 높였음.
 
-+ 뷰 참조를 위한 binding 객체 선언
+<br><br>
 
-<br>
+#### 전체적인 코드 설명
 
-```kotlin
-binding.btnLogin.setOnClickListener {
-    if(binding.etId.text.isNotEmpty() && binding.etPwd.text.isNotEmpty()) { // 아이디, 비밀번호 모두 입력 되어있을 때 homeactivity 로 이동
-        Toast.makeText(this, "박민우님 환영합니다", Toast.LENGTH_SHORT).show()
-        startActivity(intent_login)
-    }
-    else // 둘 중 하나라도 입력 되지 않았을 때
-        Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
-}
-```
+지난 과자의 내용에서 Fragment와 RecyclerView 부분만 추가해주었다. `HomeActivity`에 버튼 두개를 추가하고 각 버튼을 누를 때마다 `HomeActivity`안에 위치해있는 Fragement들이 교체해도록 해주고, 각 Fragment에는 서로 다른 정보를 표시하는 RecyclerView를 배치해주었다. 
 
-+ editText에 내용이 입력되어있는지를 확인하기 위해 `binding.etId.text.isNotEmpty()` 를 사용
-+ `startActivity(intent_login)`을 통해 액티비티간 화면 전환 
+<br><br>
 
-<br>
+#### Fragment
 
-<br>
++ layout 파일에 `name` 속성을 통해 직접 배치할 수도 있지만 유동적으로 fragment의 추가/교체/삭제를 용이하게 해주기 위해 프로그래밍적으로 배치
 
-<br>
++ `FragmentContainerView`를 xml에 배치해놓고 class안에서 `supportFragmentManager`를 이용해 버튼 클릭에 따라 fragment를 교체해주었다. 
 
-#### SignUpActivity
++ Fragment에서의 Viewbinding
 
-```kotlin
-if(binding.etName.text.isNotEmpty() && binding.etId.text.isNotEmpty() && binding.etPwd.text.isNotEmpty() ){
-    finish()
-}
-```
+  ```kotlin
+  private var _binding: FragmentFollowerBinding? = null
+  private val binding get() = _binding!!
+  ```
 
-+ `finish()` method를 통해 현재 Activity를 종료 => 백스택에서 제거	
+  `_binding` 변수를 nullable한 변수로 선언해주고 kotlin property를 활용해 `binding` 변수의 getter를 정의해주었다.  
+
+  ```kotlin
+  override fun onDestroyView() {
+          super.onDestroyView()
+          _binding = null
+      }
+  ```
+
+  그리고 좀비 객체의 생성을 방지하기 위해 `onDestroyView()`에서 binding 객체 참조를 해제해주었다.
 
 <br>
 
-<br>
+#### RecyclerView
+
+##### RecyclerView 작업순서
+
+1. 리스트에 반복적으로 보여질 **아이템의 Layout(xml) 만들기**
+2. 아이템의 **data class** 만들기
+3. 아이템 뷰의 UI요소를 가지고 있는 **ViewHolder** 만들기
+4. ViewHolder를 생성하고 ViewHolder에 데이터를 전달하는 **Adapter**만들기
+5. **RecyclerView** 배치하기
+6. RecyclerView 아이템의 **배치방향(가로/세로/격자)** 확인하기(LayoutManager)
+7. RecyclerView에 **Adapter** 연결하기
+8. Adapter의 **데이터 갱신**하기
+
+위의 세미나 내용을 기반으로 RecyclerView를 구현해주었다.
 
 <br>
 
-#### activity_sign_in.xml
+#### 기타
 
-+ textview와 editText의 테두리에 동일한 색깔을 설정하기 위해 `res/values/colors.xml`에 sopt_color를 지정해줌.
++ 아이템 레이아웃인 `item_repo_list.xml`의 `textView`에  `maxLines`, `ems`, `ellipsize` 등의 속성을 넣어줌으로써 텍스트가 일정 범위를 넘어가면 줄임표로 표시해주었다. 
 
-  ```xml
-  <color name="Sopt_color">#FF83B9</color>
+  ```kotlin
+  android:maxLines="1"
+  android:ems="10"
+  android:ellipsize="end"
   ```
 
 <br>
 
-+ editText와 button을 더 이쁘게 디자인하게 위해 `button_background.xml`과 `edittext_background.xml`을 만들고, 
++ `RepoFragment`의 recyclerVeiw는 GridLayout 속성을 주었다. 
 
-  EditText의 background 속성에 android:background="@drawable/edittext_background"를 주고, Button의 background 속성에 android:background="@drawable/button_background" 를 주었다. 
-
-  > 특히 여기서 button에 background 속성을 줘도 기본 보라색 배경이 계속 유지되어, 이를 `res/values/themes/themes.xml`에서 <style name="Theme.Week1" parent="Theme.AppCompat.Light">로 변경해줌으로써 해결했다. 
-
-<br>
-
-+ editText에서 text가 너무 앞에 붙어있어서 답답한 느낌이 들어 속성에 padding을 주어 이를 해결함.
+  ```kotlin
+  app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+  app:spanCount="2"
+  ```
 
 <br>
 
-+ editTextView에서 `android:inputType="textPassword"` 속성을 주어 비밀번호를 입력할 때 입력내용이 가려지도록 했다. 
++ `decoRecyclerView()` 함수를 정의해 리스트 간 간단한 구분선을 넣어줬다. 
 
-<br>
+```
+private fun decoRecyclerView(){
+    val decoration = DividerItemDecoration(context, LinearLayoutManager.VERTICAL)
+    binding.rvFollower.addItemDecoration(decoration)
+}
+```
 
-<br>
+<br><br>
 
-<br>
+### 막혔던 점
+
+```kotlin
+//  val transaction = supportFragmentManager.beginTransaction()
+
+binding.btnFollower.setOnClickListener{
+    val transaction = supportFragmentManager.beginTransaction()
+    if(position == REPO_POSITION) { 
+        transaction.replace(R.id.container_home, fragmentFollower).commit()
+        position = FOLLOWER_POSITION
+    }
+}
+
+binding.btnRepo.setOnClickListener{
+    val transaction = supportFragmentManager.beginTransaction()
+    if(position == FOLLOWER_POSITION){ // follower일 때만 변경해줌
+        transaction.replace(R.id.container_home, fragmentRepo).commit()
+        position = REPO_POSITION
+    }
+}
+```
+
+처음에는 이 코드에서 `transaction` 변수가 `btnFollower`와 `btnRepo`의 각 리스너에서 모두 사용되니 이를 단순히 listener 밖으로 빼서 공유해서 사용해주었더니, 아래와 같은 오류가 발생했다. 
+
+```kotlin
+java.lang.IllegalStateException: commit already called
+```
+
+=>
+
+`transaction`변수가 각 버튼을 누를 때마다 새로 생성되지 않고 1번만 생성되어 한번의 Fragment의 변화를 commit()한 후 다시 다른 화면으로 commit하려할 때 위의 에러가 발생하는 것이었다. **이미 화면을 그리면서  commit()한 transaction에 다른 Fragment를 할당하고 Commit()하려 했기 때문에 이미 commit되었다고 에러가 발생하면서 앱이 꺼지는 것이다.**
+
+=> 따라서, 각 버튼의 `setOnClickListener()`안에 작성하여 버튼이 클릭될 때마다 transaction을 따로 만들어 주어 관리해야 한다. 
+
+<br><br>
 
 -----
 
 ### 실행화면 
 
-1. 앱 처음 실행 시, `SignInActivity`가 화면에 표시됨
+1. 로그인 화면
 
 <img src = "https://user-images.githubusercontent.com/31370590/136657827-e153f3f9-4507-4a20-8b2e-6e3dd6817979.PNG" width = "250" height = "450">
 
 <br>
 
-2. 회원가입 버튼 클릭 시, `SignUpActivity`로 이동 
+2. 아이디와 비밀번호 입력 후 로그인 버튼 클릭 시, `HomeActivity`로 전환 
 
-<img src = "https://user-images.githubusercontent.com/31370590/136657955-71cda1be-c361-4411-a834-36c73d857999.PNG" width = "250" height = "450">
-
-<br>
-
-3. 이름, 아이디, 비밀번호 중 하나라도 입력이 안 되어있다면 toast 메시지 출력, 다 입력되어 있다면 다시 `SignInActivity`로 이동
-
-<img src = "https://user-images.githubusercontent.com/31370590/136657979-7a10c388-6193-4437-87b2-64d6e8e476e4.PNG" width = "250" height = "450">
+   <img src = "https://user-images.githubusercontent.com/31370590/138468555-60464603-805a-4ae8-8348-8ac2cd845563.PNG" width = "250" height = "450">
 
 <br>
 
-4. 아이디와 비밀번호를 입력하고 로그인 버튼을 누르면 `HomeActivity`로 이동
+3. 각 버튼을 누르면 프래그먼트가 전환되고 이에 따라 리사이클러뷰에서 해당하는 data 표시해줌
 
-<img src = "https://user-images.githubusercontent.com/31370590/136658016-9e4b8853-326c-4596-8a3b-7701455f8729.PNG" width = "250" height = "450">
+   <img src = "https://user-images.githubusercontent.com/31370590/138468763-9851b130-cf10-42a6-a701-8c34033e9ec9.PNG" width = "250" height = "450">
