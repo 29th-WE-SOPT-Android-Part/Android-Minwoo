@@ -16,6 +16,10 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initBtnListener()
+    }
+
+    private fun initBtnListener(){
         // btn_sigh_up 버튼 클릭 시
         binding.btnSignUp.setOnClickListener{ // 모든 입력이 되어있다면 회원가입 완료 -> 다시 SignInActivity로 이동
             if(binding.etName.text.isNotEmpty() && binding.etId.text.isNotEmpty() && binding.etPwd.text.isNotEmpty() ){
