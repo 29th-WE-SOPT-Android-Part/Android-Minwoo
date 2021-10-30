@@ -15,7 +15,7 @@
 
 #### 전체적인 코드 설명
 
-지난 과자의 내용에서 Fragment와 RecyclerView 부분만 추가해주었다. `HomeActivity`에 버튼 두개를 추가하고 각 버튼을 누를 때마다 `HomeActivity`안에 위치해있는 Fragement들이 교체해도록 해주고, 각 Fragment에는 서로 다른 정보를 표시하는 RecyclerView를 배치해주었다. 
+지난 과제의 내용에서 Fragment와 RecyclerView 부분만 추가해주었다. `HomeActivity`에 버튼 두개를 추가하고 각 버튼을 누를 때마다 `HomeActivity`안에 위치해있는 Fragement들이 교체해도록 해주고, 각 Fragment에는 서로 다른 정보를 표시하는 RecyclerView를 배치해주었다. 
 
 <br><br>
 

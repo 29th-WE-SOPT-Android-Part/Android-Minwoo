@@ -13,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="38dp"
-        android:fontFamily="@font/noto_sans_kr"
+
         android:text="깃허브 아이디"
         android:textColor="#000000"
+        android:fontFamily="@font/noto_sans_kr"
         android:textFontWeight="700"
         android:textSize="14sp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_github" />
 
@@ -27,13 +29,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="20dp"
+
         android:background="@drawable/selector_edit_text"
         android:ems="10"
         android:hint="아이디를 입력해주세요"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:padding="9dp"
-        android:textSize="13sp"
+
+        android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_id"
@@ -44,11 +50,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
+
         android:text="비밀번호"
         android:textColor="#000000"
         android:textSize="14sp"
         android:fontFamily="@font/noto_sans_kr"
         android:textFontWeight="700"
+
         app:layout_constraintStart_toStartOf="@+id/et_id"
         app:layout_constraintTop_toBottomOf="@+id/et_id" />
 
@@ -57,16 +65,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/selector_edit_text"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
-        android:inputType="textPassword"
 
+        android:inputType="textPassword"
         android:minHeight="48dp"
+
         android:padding="9dp"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+
+
+        app:layout_constraintEnd_toEndOf="@+id/et_id"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_pwd"
         app:layout_constraintTop_toBottomOf="@+id/tv_pwd" />
@@ -77,26 +89,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="173dp"
         android:background="@drawable/login_btn_background"
+
         android:text="로그인"
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="700"
+
         app:layout_constraintEnd_toEndOf="@+id/et_pwd"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et_pwd"
         app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
-
-    <Button
-        android:id="@+id/btn_sign_in"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="#FFFFFF"
-        android:text="회원가입"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <ImageView
         android:id="@+id/iv_github"
@@ -107,6 +110,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_github" />
+
+    <TextView
+        android:id="@+id/tv_account_exist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="16dp"
+
+        android:text="계정이 없으신가요?"
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="400"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+
+        android:fontFamily="@font/noto_sans_kr"
+        android:text="회원가입"
+        android:textFontWeight="700"
+
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_account_exist"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

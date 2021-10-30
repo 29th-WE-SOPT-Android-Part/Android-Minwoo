@@ -5,17 +5,30 @@ import android.os.Bundle
 import com.example.week1.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
-    private var position = FOLLOWER_POSITION
+    // private var position = FOLLOWER_POSITION
     private lateinit var binding: ActivityHomeBinding
+    private lateinit var homeViewPagerAdapter: HomeViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
-        initTransactionEvent()
+        // initTransactionEvent()
+        initAdapter()
         setContentView(binding.root)
     }
 
+
+    private fun initAdapter() {
+        val fragmentList = listOf(ProfileFragment(), HomeFragment())
+
+        homeViewPagerAdapter = HomeViewPagerAdapter(this)
+        homeViewPagerAdapter.fragments.addAll(fragmentList)
+
+        binding.vpHome.adapter = homeViewPagerAdapter
+    }
+
+    /*
     private fun initTransactionEvent() {
         val fragmentFollower = FollowerFragment()
         val fragmentRepo = RepoFragment()
@@ -43,4 +56,5 @@ class HomeActivity : AppCompatActivity() {
         const val FOLLOWER_POSITION = 1
         const val REPO_POSITION = 2
     }
+    */
 }
