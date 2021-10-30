@@ -6,59 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="SOPTHub"
-        android:textColor="@color/sopt_color"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="로그인"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tv_title"
-        app:layout_constraintStart_toStartOf="@+id/tv_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
 
     <TextView
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:text="아이디"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:text="깃허브 아이디"
         android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:textFontWeight="700"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_github" />
 
     <EditText
         android:id="@+id/et_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/selector_edit_text"
         android:ems="10"
         android:hint="아이디를 입력해주세요"
-        android:padding="9dp"
-        android:textSize="10dp"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:padding="9dp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_id"
@@ -68,11 +43,12 @@
         android:id="@+id/tv_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="34dp"
         android:text="비밀번호"
         android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="700"
         app:layout_constraintStart_toStartOf="@+id/et_id"
         app:layout_constraintTop_toBottomOf="@+id/et_id" />
 
@@ -80,16 +56,16 @@
         android:id="@+id/et_pwd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="20dp"
-        android:inputType="textPassword"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/selector_edit_text"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
 
         android:minHeight="48dp"
         android:padding="9dp"
-        android:textSize="10dp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_pwd"
@@ -99,8 +75,8 @@
         android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/button_background"
+        android:layout_marginTop="173dp"
+        android:background="@drawable/login_btn_background"
         android:text="로그인"
         android:textColor="@color/white"
         android:textSize="15dp"
@@ -113,7 +89,7 @@
         android:id="@+id/btn_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_background"
         android:backgroundTint="#FFFFFF"
         android:text="회원가입"
@@ -121,6 +97,16 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <ImageView
+        android:id="@+id/iv_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_github" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
