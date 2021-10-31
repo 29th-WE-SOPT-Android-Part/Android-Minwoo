@@ -5,7 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.week1.databinding.FragmentRepoBinding
 
 class RepoFragment : Fragment() {
@@ -20,12 +21,18 @@ class RepoFragment : Fragment() {
     ): View? {
         _binding = FragmentRepoBinding.inflate(layoutInflater, container, false)
         initAdapter()
+        decoRecyclerView()
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun decoRecyclerView(){
+        val decoration = DividerItemDecoration(context, LinearLayoutManager.VERTICAL)
+        binding.rvRepo.addItemDecoration(decoration)
     }
 
     private fun initAdapter(){
@@ -35,10 +42,9 @@ class RepoFragment : Fragment() {
 
         repoAdapter.repoList.addAll(
             listOf(
-                RepoData("안드로이드 과제 레포지토리", "역시 솝트 안드로이드 과제가 최우선"),
-                RepoData("알고리즘 과제 레포지토리", "알고리즘 과제"),
-                RepoData("컴퓨터 네트워크 과제 레포지토리", "컴퓨터 네트워크 과제"),
-                RepoData("리눅스 레포지토리", "리눅스 과제")
+                RepoData("안드로이드 과제 레포지토리", "안드로이드 파트 과제"),
+                RepoData("안드로이드 과제 레포지토리", "안드로이드 파트 과제"),
+                RepoData("안드로이드 과제 레포지토리", "안드로이드 파트 과제")
             )
         )
 

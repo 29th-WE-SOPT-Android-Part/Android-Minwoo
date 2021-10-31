@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="sopt_color">#FF83B9</color>
+    <color name="btnSelected">#fab24c</color>
+    <color name="btnNotSelected">#F2F2F2</color>
 </resources>

@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
 
         app:itemIconTint="@color/selector_home_bottom_navi"
-        app:itemRippleColor="#FFB2FF"
         app:itemTextColor="@color/selector_home_bottom_navi"
+        app:itemRippleColor="#FFB2FF"
         app:backgroundTint="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/vp_home"

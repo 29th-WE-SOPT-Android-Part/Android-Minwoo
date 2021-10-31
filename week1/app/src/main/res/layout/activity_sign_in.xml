@@ -7,6 +7,16 @@
     tools:context=".SignInActivity">
 
 
+    <ImageView
+        android:id="@+id/iv_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_github"/>
+
     <TextView
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
@@ -40,6 +50,7 @@
         android:textSize="14sp"
         android:fontFamily="@font/noto_sans_kr"
         android:textFontWeight="400"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_id"
@@ -68,7 +79,6 @@
         android:background="@drawable/selector_edit_text"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
-
         android:inputType="textPassword"
         android:minHeight="48dp"
 
@@ -101,27 +111,17 @@
         app:layout_constraintStart_toStartOf="@+id/et_pwd"
         app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
 
-    <ImageView
-        android:id="@+id/iv_github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_github" />
-
     <TextView
         android:id="@+id/tv_account_exist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="16dp"
 
-        android:text="계정이 없으신가요?"
-        android:textSize="12sp"
         android:fontFamily="@font/noto_sans_kr"
+        android:text="계정이 없으신가요?"
         android:textFontWeight="400"
+        android:textSize="12sp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
