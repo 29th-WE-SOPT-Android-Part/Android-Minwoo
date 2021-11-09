@@ -4,33 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:paddingStart="21dp"
+    android:paddingTop="23.5dp"
+    android:paddingBottom="23.5dp">
 
     <ImageView
         android:id="@+id/iv_profile"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/ic_miniuns" />
 
     <TextView
         android:id="@+id/tv_follower_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textSize="20sp"
-        tools:text="이름"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="700"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/iv_profile"
-        app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+        app:layout_constraintTop_toTopOf="@+id/iv_profile"
+        tools:text="이름" />
 
     <TextView
         android:id="@+id/tv_follower_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_kr"
+        android:textFontWeight="400"
         app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
         app:layout_constraintStart_toStartOf="@+id/tv_follower_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_follower_name"
         tools:text="소개가 필요합니다" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,15 +5,41 @@
       <map>
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/button_background.xml" value="0.3828125" />
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/edittext_background.xml" value="0.3828125" />
-        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/github_btn_not_selected.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/github_btn_selected.xml" value="0.3828125" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/github_btn_selecteed.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_camera.xml" value="0.221875" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_home.xml" value="0.221875" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_img_github.xml" value="0.30625" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_miniuns.xml" value="0.3072916666666667" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_profile.xml" value="0.221875" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/ic_setting.xml" value="0.221875" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/login_btn_background.xml" value="0.22" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/rectangle_border_pink.xml" value="0.30625" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/rectangle_fill_gray.xml" value="0.30625" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/selector_edit_text.xml" value="0.30625" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/selector_github_btn.xml" value="0.3385416666666667" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/selector_sample_text.xml" value="0.30625" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/drawable/selector_text_color.xml" value="0.3828125" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/font-v26/noto_sans_kr.xml" value="0.30185185185185187" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/font/nato_sans_kr.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/font/noto_sans_kr.xml" value="0.30185185185185187" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/font/noto_sans_kr_regular.xml" value="1.2142857142857142" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_main.xml" value="0.26992753623188404" />
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_second.xml" value="0.26992753623188404" />
-        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
-        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_sign_up.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_sign_in.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/activity_sign_up.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_empty_follower.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_empty_following.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_follower.xml" value="0.21920289855072464" />
-        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_repo.xml" value="0.1" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/fragment_repo.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/item_follower_list.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/item_repo_list.xml" value="0.22" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/layout/item_repo_list.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alsd2/AndroidStudioProjects/Android-Minwoo/week1/app/src/main/res/menu/menu_home.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

@@ -33,7 +33,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         // btnSignIn 버튼 클릭 시 회원가입 페이지로 이동 -> SignUpActivity
-        binding.btnSignIn.setOnClickListener {
+        binding.tvSignUp.setOnClickListener {
             startActivity(intentSignup)
         }
     }
