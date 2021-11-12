@@ -29,8 +29,6 @@ class SignInActivity : AppCompatActivity() {
         // btnLogin 버튼 클릭 시 로그인
         binding.btnLogin.setOnClickListener {
             if(binding.etId.text.isNotEmpty() && binding.etPwd.text.isNotEmpty()) { // 아이디, 비밀번호 모두 입력 되어있을 때 homeactivity 로 이동
-                // Toast.makeText(this, "박민우님 환영합니다", Toast.LENGTH_SHORT).show()
-                // startActivity(intentLogin)
                 initNetwork()
             }
             else // 둘 중 하나라도 입력 되지 않았을 때
