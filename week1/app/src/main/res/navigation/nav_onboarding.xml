@@ -27,5 +27,14 @@
         android:id="@+id/onBoardingLastFragment"
         android:name="com.example.week1.ui.OnBoardingLastFragment"
         android:label="fragment_on_boarding_last"
-        tools:layout="@layout/fragment_on_boarding_last" />
+        tools:layout="@layout/fragment_on_boarding_last" >
+        <action
+            android:id="@+id/action_onBoardingLastFragment_to_signInActivity"
+            app:destination="@id/signInActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.example.week1.ui.SignInActivity"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" />
 </navigation>

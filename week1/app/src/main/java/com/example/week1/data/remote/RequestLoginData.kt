@@ -1,4 +1,4 @@
-package com.example.week1
+package com.example.week1.data.remote
 
 data class RequestLoginData(
     val email : String,

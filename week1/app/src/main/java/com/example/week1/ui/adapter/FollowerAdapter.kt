@@ -3,7 +3,7 @@ package com.example.week1.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.week1.data.FollowerData
+import com.example.week1.data.local.FollowerData
 import com.example.week1.databinding.ItemFollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(){

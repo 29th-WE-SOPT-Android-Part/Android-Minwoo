@@ -1,4 +1,4 @@
-package com.example.week1
+package com.example.week1.data.remote
 
 import retrofit2.Call
 import retrofit2.http.Body

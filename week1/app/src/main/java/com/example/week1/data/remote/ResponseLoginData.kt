@@ -1,15 +1,14 @@
-package com.example.week1
+package com.example.week1.data.remote
 
-data class ResponseSignUpData(
+data class ResponseLoginData(
     val status : Int,
-    val success : String,
+    val success : Boolean,
     val message : String,
     val data : Data
 ) {
     data class Data(
         val id : Int,
         val name : String,
-        val password : String,
         val email : String
     )
 }

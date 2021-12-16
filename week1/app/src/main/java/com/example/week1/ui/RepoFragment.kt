@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.week1.ui.adapter.RepoAdapter
-import com.example.week1.data.RepoData
+import com.example.week1.data.local.RepoData
 import com.example.week1.databinding.FragmentRepoBinding
 
 class RepoFragment : Fragment() {

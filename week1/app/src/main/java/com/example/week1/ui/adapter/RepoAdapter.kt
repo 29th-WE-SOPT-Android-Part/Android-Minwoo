@@ -3,7 +3,7 @@ package com.example.week1.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.week1.data.RepoData
+import com.example.week1.data.local.RepoData
 import com.example.week1.databinding.ItemRepoListBinding
 
 class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(){

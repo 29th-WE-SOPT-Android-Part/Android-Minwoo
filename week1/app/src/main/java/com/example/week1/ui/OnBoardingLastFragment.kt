@@ -20,6 +20,8 @@ class OnBoardingLastFragment : Fragment() {
         _binding = FragmentOnBoardingLastBinding.inflate(layoutInflater, container, false)
 
         binding.btnStartSignIn.setOnClickListener{
+            findNavController().navigate(R.id.action_onBoardingLastFragment_to_signInActivity)
+            requireActivity().finish()
         }
         return binding.root
     }

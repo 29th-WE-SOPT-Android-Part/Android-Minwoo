@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.week1.data.remote.RequestSignUpData
+import com.example.week1.data.remote.ResponseSignUpData
+import com.example.week1.data.remote.ServiceCreator
 import com.example.week1.databinding.ActivitySignUpBinding
 import retrofit2.Call
 import retrofit2.Callback
