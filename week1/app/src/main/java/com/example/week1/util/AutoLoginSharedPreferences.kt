@@ -24,15 +24,19 @@ object AutoLoginSharedPreferences {
     }
 
 
-    fun removeAutoLogin(context: Context) = getAutoLoginSharedPreferences(context)
-        .edit()
-        .remove(AUTO_LOGIN)
-        .apply()
+    fun removeAutoLogin(context: Context) {
+        getAutoLoginSharedPreferences(context)
+            .edit()
+            .remove(AUTO_LOGIN)
+            .apply()
+    }
 
 
-    fun clearAutoLogin(context: Context) = getAutoLoginSharedPreferences(context)
-        .edit()
-        .clear()
-        .apply()
+    fun clearAutoLogin(context: Context) {
+        getAutoLoginSharedPreferences(context)
+            .edit()
+            .clear()
+            .apply()
+    }
 
 }

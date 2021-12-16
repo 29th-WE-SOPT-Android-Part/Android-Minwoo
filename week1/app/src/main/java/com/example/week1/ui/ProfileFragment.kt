@@ -1,5 +1,6 @@
 package com.example.week1.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,6 +23,7 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         initTransactionEvent()
         initImage()
+        initListener()
         return binding.root
     }
 
@@ -31,6 +33,12 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
+
+    private fun initListener(){
+        binding.ivSetting.setOnClickListener{
+            startActivity(Intent(context, SettingActivity::class.java))
+        }
+    }
 
     private fun initTransactionEvent() {
         val fragmentFollower = FollowerFragment()

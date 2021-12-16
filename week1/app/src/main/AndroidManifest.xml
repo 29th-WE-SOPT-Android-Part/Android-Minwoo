@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Week1">
         <activity
+            android:name=".ui.SettingActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
@@ -28,7 +31,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.SignInActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
