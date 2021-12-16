@@ -1,5 +1,6 @@
 package com.example.week1.ui
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.example.week1.data.remote.ServiceCreator
+import com.example.week1.util.AutoLoginSharedPreferences
 
 class SignInActivity : AppCompatActivity() {
 
@@ -20,10 +22,32 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
+        initClickEvent()
+        isAutoLogin()
         initBtnListener()
+        setContentView(binding.root)
     }
+
+    private fun initClickEvent(){
+        binding.cbAutoLogin.setOnClickListener{
+            AutoLoginSharedPreferences.setAutoLogin(this, binding.cbAutoLogin.isChecked)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if(AutoLoginSharedPreferences.getAutoLogin(this)){
+            shortToast("자동로그인 되셨습니다")
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }
+    }
+
+    fun Context.shortToast(message: String){
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+
 
     private fun initBtnListener(){
         // val intentLogin = Intent(this, HomeActivity::class.java)

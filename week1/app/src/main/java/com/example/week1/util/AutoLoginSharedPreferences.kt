@@ -16,9 +16,12 @@ object AutoLoginSharedPreferences {
     )
 
 
-    fun setAutoLogin(context: Context, value: Boolean) = getAutoLoginSharedPreferences(context)
-        .edit()
-        .putBoolean(AUTO_LOGIN, value)
+    fun setAutoLogin(context: Context, value: Boolean) {
+        getAutoLoginSharedPreferences(context)
+            .edit()
+            .putBoolean(AUTO_LOGIN, value)
+            .apply()
+    }
 
 
     fun removeAutoLogin(context: Context) = getAutoLoginSharedPreferences(context)
