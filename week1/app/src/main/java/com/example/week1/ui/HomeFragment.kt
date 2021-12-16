@@ -1,10 +1,11 @@
-package com.example.week1
+package com.example.week1.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.week1.ui.adapter.HomeTabViewAdapter
 import com.example.week1.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

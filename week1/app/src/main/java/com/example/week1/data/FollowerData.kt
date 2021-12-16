@@ -1,4 +1,4 @@
-package com.example.week1
+package com.example.week1.data
 
 import java.lang.invoke.MethodHandleInfo
 

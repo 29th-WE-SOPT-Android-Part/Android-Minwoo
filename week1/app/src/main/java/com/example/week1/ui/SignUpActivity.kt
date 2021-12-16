@@ -1,6 +1,5 @@
-package com.example.week1
+package com.example.week1.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
