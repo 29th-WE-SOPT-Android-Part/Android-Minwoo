@@ -11,7 +11,7 @@
         android:id="@+id/tv_on_boarding_goodtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="300dp"
         android:text="SOPTHub에서 즐거운 시간\n 보내시길 바랍니다 !"
         android:textAlignment="center"
         android:textColor="#F658A6"
