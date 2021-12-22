@@ -1,9 +1,9 @@
-package com.example.week1
+package com.example.week1.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.week1.data.local.RepoData
 import com.example.week1.databinding.ItemRepoListBinding
 
 class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(){
@@ -11,7 +11,7 @@ class RepoAdapter : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RepoAdapter.RepoViewHolder {
+    ): RepoViewHolder {
         val binding = ItemRepoListBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false

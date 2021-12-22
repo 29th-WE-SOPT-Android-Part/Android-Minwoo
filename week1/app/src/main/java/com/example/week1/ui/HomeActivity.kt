@@ -1,9 +1,10 @@
-package com.example.week1
+package com.example.week1.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
+import com.example.week1.ui.adapter.HomeViewPagerAdapter
+import com.example.week1.R
 import com.example.week1.databinding.ActivityHomeBinding
 import java.util.*
 

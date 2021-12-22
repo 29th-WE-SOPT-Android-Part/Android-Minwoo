@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_onboarding"
+    app:startDestination="@id/onBoardingFisrtFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFisrtFragment"
+        android:name="com.example.week1.ui.OnBoardingFisrtFragment"
+        android:label="fragment_on_boarding_fisrt"
+        tools:layout="@layout/fragment_on_boarding_fisrt" >
+        <action
+            android:id="@+id/action_onBoardingFisrtFragment_to_onBoardingSecondFragment"
+            app:destination="@id/onBoardingSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingSecondFragment"
+        android:name="com.example.week1.ui.OnBoardingSecondFragment"
+        android:label="fragment_on_boarding_second"
+        tools:layout="@layout/fragment_on_boarding_second" >
+        <action
+            android:id="@+id/action_onBoardingSecondFragment_to_onBoardingLastFragment"
+            app:destination="@id/onBoardingLastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingLastFragment"
+        android:name="com.example.week1.ui.OnBoardingLastFragment"
+        android:label="fragment_on_boarding_last"
+        tools:layout="@layout/fragment_on_boarding_last" >
+        <action
+            android:id="@+id/action_onBoardingLastFragment_to_signInActivity"
+            app:destination="@id/signInActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.example.week1.ui.SignInActivity"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" />
+</navigation>

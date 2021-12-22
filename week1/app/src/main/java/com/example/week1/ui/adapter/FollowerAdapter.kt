@@ -1,8 +1,9 @@
-package com.example.week1
+package com.example.week1.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.week1.data.local.FollowerData
 import com.example.week1.databinding.ItemFollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>(){
@@ -11,7 +12,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): FollowerAdapter.FollowerViewHolder {
+    ): FollowerViewHolder {
         val binding = ItemFollowerListBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false

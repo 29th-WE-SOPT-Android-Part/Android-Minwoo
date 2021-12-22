@@ -1,4 +1,4 @@
-package com.example.week1
+package com.example.week1.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

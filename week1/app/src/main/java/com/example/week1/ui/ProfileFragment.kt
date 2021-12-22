@@ -1,17 +1,14 @@
-package com.example.week1
+package com.example.week1.ui
 
-import android.content.res.ColorStateList
-import android.graphics.Color
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
+import com.example.week1.R
 import com.example.week1.databinding.FragmentProfileBinding
-import com.example.week1.databinding.FragmentRepoBinding
 
 class ProfileFragment : Fragment() {
     private var position = FOLLOWER_POSITION
@@ -26,6 +23,7 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         initTransactionEvent()
         initImage()
+        initListener()
         return binding.root
     }
 
@@ -35,6 +33,12 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
+
+    private fun initListener(){
+        binding.ivSetting.setOnClickListener{
+            startActivity(Intent(context, SettingActivity::class.java))
+        }
+    }
 
     private fun initTransactionEvent() {
         val fragmentFollower = FollowerFragment()
